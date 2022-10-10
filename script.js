@@ -6,10 +6,10 @@ var generateBtn = document.querySelector("#generate");
 
 // Adding variabl keys to the password
 var {
-  upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-  lowerCase: "abcdefghijklmnopqrstuvwxyz",
-  number: "0123456789",
-  symbol: "!@#$%^&*()_+~\\`|}{[]:;?><,./-="
+  upperCase= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  lowerCase= "abcdefghijklmnopqrstuvwxyz";
+  number= "0123456789";
+  symbol= "!@#$%^&*()_+~\\`|}{[]:;?><,./-=";
 }
 
 // Write password to the #password input
@@ -21,6 +21,12 @@ function writePassword() {
   passwordText.value = password;
   return;
 }
+
+//function code for password generator
+function generatePassword() {
+    var randompassword = "";
+}
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
