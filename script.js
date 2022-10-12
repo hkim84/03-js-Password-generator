@@ -1,10 +1,19 @@
-// Assignment code here
-
-// Get references to the #generate element
-// button generator
+///////////////////////// DO NOT CHANGE ////////////////////////////////////
+// Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Adding variabl keys to the password
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+///////////////////////// DO NOT CHANGE ABOVE HERE /////////////////////////
+
+// Adding variable of Character to use in random password
 var {
   upperCase= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   lowerCase= "abcdefghijklmnopqrstuvwxyz";
@@ -12,23 +21,9 @@ var {
   symbol= "!@#$%^&*()_+~\\`|}{[]:;?><,./-=";
 }
 
-// Write password to the #password input
-//inputting password in computer
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-  return;
-}
-
-//function code for password generator
 function generatePassword() {
-    var randompassword = "";
+  /////////////////////////// WRITE YOUR CODE HERE /////////////////////////
+  var Password= "";
+
 }
-
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
 
