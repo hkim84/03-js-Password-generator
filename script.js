@@ -26,40 +26,54 @@ function generatePassword() {
 
   //Global var
   // arrays square bracket commas
-  // var uppercase = ["A","B","C","D","E","F",GHIJKLMNOPQRSTUVWXYZ"];
-  // var lowercase = "abcdefghijklmnopqrstuvwxyz";
-  // var numericvalue = "0123456789";
-  // var specialsymbol = "!@#$%^&*()-+=~?<>";
+  var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L","M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l","m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  var numericvalue = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  var specialsymbol = ["~", "`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+"];
+
 
   //Password length choice from 8 to 128 characters
-  function getoption() {
-    var pwans = prompt(
-      "Choose a number between 8 through 128 for you password length"
-    );
-    console.log(pwans);
+    var pwans = prompt("choose between a number from 8 through 128 for you password length");
     if (pwans < 8 || pwans > 128) {
-      alert("string pwans is invalid");
-      return;
-    } else {
-      // alert("string pwans is valid")
-      var uppercaseans = confirm("would you like uppercase characters?");
-      if (uppercaseans === true) {
-        console.log("user wants uppercase");
-        // user wants upper, keeptrack all uppercase letters
-        // continue to next prompt
-      } else {
-        console.log("user does not want uppercase");
-       // user does not wants upper, keeptrack all uppercase letters
-        // continue to next prompt
-      }
+      return "please choose a number between 8 and 128.";
+    } else if (isNaN(pwans)) {
+      pwans = prompt("enter a valid number");
     }
-  }
-  getoption();
-  // var pslength = prompt("Choose a number between 8 through 128 for you password length");
-  //   if (pslength >=7){
-  //     if (pslength >=8 && pslength <= 128){
+    else {
+      alert("your password will be " + pwans + " the password length.");
+    }
+  //Password confirmation of character to use upper,lower,numeric,specials
+    tcupcase = confirm("would you like an uppercase character?");
+    if (tcupcase) {
+      var upper = alert("password will contain uppercase characters");
+    }
+    else {
+      alert("password will not contain uppercase characters");
+    }
 
-  //     }
-  //   }
-}
-generatePassword();
+    tclocase = confirm("would you like an lowercase character?");
+    if (tclocase) {
+      alert("password will contain lowercase characters");
+    }
+    else {
+      alert("password will not contain lowercase characters");
+    }
+
+    tcnvalue = confirm("would you like an numeric value character?");
+    if (tcnvalue) {
+      alert("password will contain numeric value characters");
+    }
+    else {
+      alert("password will not contain numeric value characters");
+    }
+
+    tcssymbol = confirm("would you like an special symbol character?");
+    if (tcssymbol) {
+      alert("password will contain special symbol characters");
+    }
+    else {
+      alert("password will not contain special symbol characters");
+    }
+
+  
+generatePassword();}
