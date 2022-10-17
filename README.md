@@ -12,8 +12,8 @@ creating a random password
 N/a
 
 ## Displayable site
-[Github deployable page]()
+[Github deployable page](https://hkim84.github.io/03-js-Password-generator/)
 
 ## screen shot
-![website]()
+![website](./Web%20capture_17-10-2022_161835_hkim84.github.io.jpeg)
 
