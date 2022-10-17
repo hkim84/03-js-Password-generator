@@ -30,7 +30,7 @@ function generatePassword() {
   var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l","m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var numericvalue = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   var specialsymbol = ["~", "`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+"];
-
+  var characters = [];
 
   //Password length choice from 8 to 128 characters
     var pwans = prompt("choose between a number from 8 through 128 for you password length");
@@ -45,7 +45,7 @@ function generatePassword() {
   //Password confirmation of character to use upper,lower,numeric,specials
     tcupcase = confirm("would you like an uppercase character?");
     if (tcupcase) {
-      var upper = alert("password will contain uppercase characters");
+      alert("password will contain uppercase characters");
     }
     else {
       alert("password will not contain uppercase characters");
@@ -75,5 +75,32 @@ function generatePassword() {
       alert("password will not contain special symbol characters");
     }
 
+  //giving a value of false statement
+    if (tcupcase === false && tclocase === false && tcnvalue === false && tcssymbol === false) {
+      return "need to select at least one charater to randomize password"
+    }
+
+  //grouping to selected random characters
+    if (tcupcase){
+      characters = characters.concat(uppercase);
+    }
+    if (tclocase){
+      characters = characters.concat(lowercase);
+    }  
+    if (tcnvalue){
+      characters = characters.concat(numericvalue);
+    }  
+    if (tcssymbol){
+      characters = characters.concat(specialsymbol);
+    }  
+
+  //randomizer to characters
+    let gpassword = ""
+    for (let i = 0; i < pwans; i++) {
+      let rchar =[Math.floor(Math.random() * characters.length)];
+      gpassword = gpassword + characters[rchar];
+    }
+    return gpassword;
   
-generatePassword();}
+
+  generatePassword();}
