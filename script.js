@@ -102,5 +102,4 @@ function generatePassword() {
     }
     return gpassword;
   
-
-  generatePassword();}
+generatePassword();}
